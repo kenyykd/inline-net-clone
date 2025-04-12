@@ -79,13 +79,11 @@ li:hover .dropdown {
 .system {
   background-image: url(../public/system-bgc.png);
   background-repeat: repeat;
-  height: 80vh;
   background-position: center top -40px;
   background-size: cover;
+  height: 80vh;
   position: relative;
   padding: 0 360px;
-  display: flex;
-  justify-content: start;
 }
 
 .system div {
@@ -127,3 +125,91 @@ li:hover .dropdown {
   padding: 12px 25px;
   border-radius: 7px;
 }
+
+.worldmap {
+  background-image: url(../public/worldmap-bgc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  padding: 0 360px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.worldmap div {
+  position: absolute;
+  text-align: center;
+  top: 180px;
+}
+
+.worldmap p {
+  color: #333;
+  padding-bottom: 10px;
+}
+
+.mid-title {
+  height: 15vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.mid-title strong {
+  display: block;
+  font-size: 25px;
+  color: #ec6300;
+}
+
+.mid-title strong:nth-of-type(2) {
+  color: #252932;
+  font-size: 28px;
+  margin-top: 40px;
+}
+
+.manage {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  background-image: url(../public/manage-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 360px;
+  color: #252932;
+}
+
+.manage-image {
+  width: 50%;
+  margin-top: 80px;
+}
+
+.manage-title {
+  color: #064c8c;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.manage-text {
+  display: flex;
+  width: 560px;
+  margin-bottom: 60px;
+}
+
+.manage-text-img {
+  margin-right: 25px;
+}
+
+.manage-text-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.manage-02 {
+  background-image: url(../public/manage02-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
