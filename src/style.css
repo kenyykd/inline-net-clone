@@ -9,11 +9,12 @@ header {
 
 header nav {
   width: 1200px;
-  height: 90px;
+  /* height: 90px; */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 
 .nav-list {
@@ -68,11 +69,11 @@ header li {
   border-top: 1px solid #e6e6e6;
 }
 
-li:hover {
+header li:hover {
   color: #ff6e06;
 }
 
-li:hover .dropdown {
+header li:hover .dropdown {
   display: block;
 }
 
@@ -82,6 +83,7 @@ li:hover .dropdown {
   background-position: center top -40px;
   background-size: cover;
   height: 80vh;
+  min-height: 80vh;
   position: relative;
   padding: 0 360px;
 }
@@ -211,4 +213,292 @@ li:hover .dropdown {
   background-image: url(../public/manage02-background.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.restaurant {
+  height: 85vh;
+}
+
+.restaurant-content {
+  padding: 0 360px;
+  text-align: center;
+}
+
+.restaurant-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #252932;
+  margin: 70px 0 135px 0;
+}
+
+.restaurant-content ul {
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.restaurant-content li {
+  padding: 14px 25px;
+  color: #666;
+  height: 60px;
+  cursor: pointer;
+}
+
+.restaurant-image {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restaurant-image img {
+  width: 200px;
+}
+
+.restaurant-content li.active {
+  border-bottom: 4px solid #ff6e06;
+  color: #252932;
+  font-weight: bold;
+}
+
+.restaurant-form {
+  height: 280vh;
+  background-image: url(../public/restaurant-form-background.png);
+  background-size: cover;
+  text-align: center;
+}
+
+.restaurant-form h3 {
+  margin-bottom: 50px;
+}
+
+.restaurant-form h3 p {
+  color: #ff6600;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.restaurant-form-name {
+  font-size: 20px;
+  margin-bottom: 110px;
+}
+
+.title strong {
+  color: #064c8c;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.title div {
+  margin: 25px 0;
+}
+
+.title span {
+  font-size: 14px;
+}
+
+.title span:nth-of-type(2) {
+  font-weight: 700;
+  color: red;
+}
+
+.title a {
+  font-weight: 700;
+  color: #000080;
+}
+
+.form-area {
+  background-color: #fff;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 120px;
+  border-radius: 15px;
+}
+.form-area p {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.form-area p:nth-of-type(2) {
+  margin-bottom: 50px;
+}
+
+.form-area form {
+  padding: 0 130px 60px;
+}
+
+form label {
+  color: #252932;
+  cursor: pointer;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 15px;
+}
+
+form select {
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+form button {
+  display: block;
+  margin: 25px auto;
+  padding: 10px 50px;
+  background-color: #ec6337;
+  color: #fff;
+  border-radius: 30px;
+}
+
+form span {
+  font-size: 12px;
+}
+
+.form-bottom-title {
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.form-bottom-title p {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.form-bottom-title div {
+  width: 188px;
+  height: 62px;
+  margin: 100px auto 50px;
+}
+
+.form-bottom-title a {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 50px 0;
+  padding: 18px 25px;
+  background-color: #064c8c;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.form-bottom-message {
+  width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form-bottom-message div {
+  margin: 0 100px;
+  text-align: center;
+}
+
+.form-bottom-message div span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.form-bottom-message div p {
+  font-size: 14px;
+  margin: 30px 0;
+}
+
+.form-bottom-message div p:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.form-bottom-message div a {
+  display: block;
+  width: 126px;
+  font-size: 12px;
+  color: #fff;
+  margin: 0 auto;
+  padding: 10px 25px;
+  background-color: #ec6337;
+  border-radius: 8px;
+}
+
+.border {
+  border-left: 1px solid rgb(179, 179, 179);
+  height: 180px;
+}
+
+footer {
+  display: flex;
+  background-color: #252932;
+  justify-content: space-evenly;
+  padding: 60px 360px;
+}
+
+footer p {
+  color: #e3e6ed;
+  margin: 15px 0 5px;
+  font-size: 14px;
+}
+.information {
+  width: 260px;
+}
+
+.palce-jump {
+  width: 260px;
+}
+
+.palce-jump a {
+  display: block;
+  color: #e3e6ed;
+  margin: 5px 0 5px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e6ed;
+}
+.footer-message {
+  width: 260px;
+}
+
+.footer-message h3 {
+  margin-bottom: 25px;
+}
+
+.footer-message p {
+  margin: 30px;
+}
+
+.footer-message a {
+  display: block;
+}
+
+.footer-message .language {
+  width: 260px;
+}
+
+.footer-message .language p {
+  border-bottom: 1px solid #e3e6ed;
+}
+
+.facebook h3 {
+  margin-bottom: 25px;
+}
+
+.facebook a {
+  font-size: 14px;
+  color: #e3e6ed;
+}
+
+.facebook div {
+  width: 260px;
+  height: 130px;
+  margin-top: 30px;
 }

@@ -10,6 +10,7 @@
     <title>inline 訂候位系統 -</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" src="./src/main.js" defer></script>
   </head>
   <body>
     <header>
@@ -85,7 +86,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main x-data="Main">
       <section class="system">
         <div>
           <h2>
@@ -96,7 +97,7 @@
           <p>inline是一套專供餐廳經營者使用，</p>
           <p>以雲端作業將訂位流程自動化，</p>
           <p>提高效率、減低錯誤的雲端管理系統。</p>
-          <a href="#">立即試用</a>
+          <a href="form-section">立即試用</a>
         </div>
       </section>
       <section class="worldmap">
@@ -284,6 +285,342 @@
           </div>
         </div>
       </section>
+      <section class="restaurant">
+        <div class="restaurant-content">
+          <h3>正在使用inline的合作夥伴…</h3>
+          <div>
+            <ul>
+              <li @click="changeSection" data-id="chain-section">
+                連鎖餐飲集團
+              </li>
+              <li @click="changeSection" data-id="five-star-section">
+                五星級飯店
+              </li>
+              <li @click="changeSection" data-id="department-section">
+                百貨賣場
+              </li>
+              <li @click="changeSection" data-id="michelin-section">
+                米其林星級
+              </li>
+              <li @click="changeSection" data-id="feature-section">特色名店</li>
+              <li @click="changeSection" data-id="overseas-section">海外</li>
+            </ul>
+          </div>
+          <div
+            id="chain-section"
+            class="restaurant-image"
+            x-show="showSection =='chain-section'"
+          >
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+            <img src="./public/restaurant-small-img01.png" alt="" />
+          </div>
+          <div
+            id="five-star-section"
+            class="restaurant-image"
+            x-show="showSection=='five-star-section'"
+          >
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+            <img src="./public/restaurant-small-img02.png" alt="" />
+          </div>
+          <div
+            id="department-section"
+            class="restaurant-image"
+            x-show="showSection=='department-section'"
+          >
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+            <img src="./public/restaurant-small-img03.png" alt="" />
+          </div>
+          <div
+            id="michelin-section"
+            class="restaurant-image"
+            x-show="showSection=='michelin-section'"
+          >
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+            <img src="./public/restaurant-small-img04.png" alt="" />
+          </div>
+
+          <div
+            id="feature-section"
+            class="restaurant-image"
+            x-show="showSection=='feature-section'"
+          >
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+            <img src="./public/restaurant-small-img05.png" alt="" />
+          </div>
+
+          <div
+            id="overseas-section"
+            class="restaurant-image"
+            x-show="showSection=='overseas-section'"
+          >
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+            <img src="./public/restaurant-small-img06.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="restaurant-form">
+        <div>
+          <h3>
+            <p>“ inline 是目前世界上最好用的</p>
+            <p>訂候位控管、帶位工具及顧客管理系統 ”</p>
+          </h3>
+          <p class="restaurant-form-name">- 許禮麟 / 金田餐飲集團總經理</p>
+          <div class="title">
+            <strong>Hi 餐廳老闆</strong>
+            <div>
+              <span>此表單為提供餐廳試用系統，</span>
+              <span>我們無法提供代訂服務</span>
+            </div>
+            <div>
+              <span>消費者訂位、訂餐請 > </span
+              ><span><a href="">查詢附近餐廳</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="form-area" id="form-section">
+          <form action="">
+            <p>現在申請可享 14 天免費試用＋專人導入教學</p>
+            <p>快讓 inline app 成為您餐廳的最佳助手！</p>
+
+            <label>
+              聯絡人姓名（必填）<br />
+              <input placeholder="e.g. Mayer" type="text" name="" id="" />
+            </label>
+            <label>
+              手機號碼（必填）<br />
+              <input
+                placeholder="e.g. 8526377XXXX"
+                type="address"
+                name=""
+                id=""
+              />
+            </label>
+            <label>
+              電子信箱（必填）<br />
+              <input
+                placeholder="e.g. welcome@inline.app"
+                type="email"
+                name=""
+                id=""
+              />
+            </label>
+            <label>
+              您的餐廳名稱（必填）<br />
+              <input placeholder="e.g. Mayer" type="text" name="" id="" />
+            </label>
+            <label>
+              您餐廳的所在國家（必填）<br />
+              <select name="country" id="country-select">
+                <option value="">--請選擇國家--</option>
+                <option value="加拿大">加拿大</option>
+                <option value="香港">香港</option>
+                <option value="印尼">印尼</option>
+                <option value="日本">日本</option>
+              </select>
+            </label>
+            <label>
+              您餐廳的所在地址（必填）<br />
+              <input type="text" name="" id="" />
+            </label>
+            <label>
+              您的職稱（必填）<br />
+              <input type="text" name="" id="" />
+            </label>
+            <label>
+              是否有使用過其他訂候位管理系統？（必填）<br />
+              <input type="text" name="" id="" />
+            </label>
+            <label>
+              您對 inline 的哪個功能有興趣？（必填）<br />
+              <select name="function" id="function-select">
+                <option value="">--請選擇--</option>
+                <option value="定候位管理">定候位管理</option>
+                <option value="外帶外送服務">外帶外送服務</option>
+                <option value="兩者皆有興趣">兩者皆有興趣</option>
+              </select>
+            </label>
+            <label>
+              您是從哪裡獲得inline的資訊？（必填）<br />
+              <select name="information" id="information-select">
+                <option value="">--請選擇--</option>
+                <option value="Google 搜尋">Google 搜尋</option>
+                <option value="社群媒體（Facebook / Instagram...等）">
+                  社群媒體（Facebook / Instagram...等）
+                </option>
+                <option value="網站廣告">網站廣告</option>
+                <option value="其他餐廳">其他餐廳</option>
+              </select>
+            </label>
+            <div>
+              <img src="./public/form-bottom-image.png" alt="" />
+            </div>
+            <button>送出</button>
+            <span
+              >此表單為提供餐廳試用系統，請勿在此進行餐廳線上訂位，如需訂位請直接聯繫餐廳</span
+            >
+          </form>
+        </div>
+        <div class="form-bottom-title">
+          <p>inline 還有什麼強大之處？</p>
+          <div><a href="https://inline.app/zh/why-inline">點擊了解更多</a></div>
+        </div>
+        <div class="form-bottom-message">
+          <div>
+            <span>直接電話聯繫我們</span>
+            <p>
+              電話客服時間：<br />
+              星期一 ~ 星期五 10:00 ~ 19:00
+            </p>
+            <p>+886 – 2 – 2322 – 3414</p>
+          </div>
+          <div class="border"></div>
+          <div>
+            <span>立即免費試用 inline</span>
+            <p>
+              免費前兩週試用期，歡迎填寫表單聯絡我們，<br />
+              我們會有專人盡快回覆您！
+            </p>
+            <a href="https://inline.app/zh/contact">立即免費試用</a>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="information">
+        <img src="./public/inline-logo.png" alt="" />
+        <p>台灣｜統編 52384127</p>
+        <p>100009 <br />台北市中正區北平東路30-1號5樓</p>
+        <p>香港｜統編 2303318</p>
+        <p>香港上環皇后大道中181號<br />新紀元廣場低座24樓2406B室</p>
+        <p>新加坡｜統編 201900515R</p>
+        <p>
+          160 Robinson Road, #14-04<br />Singapore Business
+          <br />Federation&nbsp;Centre, Singapore<br />068914
+        </p>
+        <p>澳洲｜統編 648 810 600</p>
+        <p>日本</p>
+        <p>〒105-6009</p>
+        <p>
+          東京都港区虎ノ門4丁目3番1号<br />城山トラストタワー9階<br />東京赤坂法律事務所内
+        </p>
+      </div>
+      <div class="palce-jump">
+        <h3>
+          <p>inline Sitemap</p>
+        </h3>
+        <a href="https://inline.app/zh/" aria-current="page">首頁</a>
+        <a href="https://inline.app/zh/features">訂位管理</a>
+        <a href="https://inline.app/zh/contact">立即試用</a>
+        <a href="https://inline.app/zh/clients">客戶推薦</a>
+        <a href="https://inline.app/zh/why-inline">為何使用 inline</a>
+        <a href="https://inline.app/zh/queuing">候位管理</a>
+        <a href="https://inline.app/zh/crm">顧客管理 CRM</a>
+        <a href="https://inline.app/zh/cookies">Cookies</a>
+        <a
+          href="https://inline.app/zh/%e5%85%8d%e8%b2%bb%e9%96%8b%e9%80%9a-google-%e8%a8%82%e4%bd%8d"
+          >免費開通 Google 訂位</a
+        >
+        <a
+          href="https://inline.app/zh/inline-coca-cola-2025-best-bbq-restaurants"
+          >全台燒肉名店盤點！北中南燒肉餐廳推薦</a
+        >
+      </div>
+      <div class="footer-message">
+        <h3>
+          <p>Contact us</p>
+        </h3>
+        <p>
+          <a href="mailto:support@inline.app">support@inline.app</a><br />
+          +886-2-2322-3414<br />
+          星期一~星期五 10:00~19:00
+        </p>
+        <p>
+          異業合作、餐飲新聞稿<a href="mailto:marketing@inline.tw"
+            >marketing@inline.tw</a
+          >
+        </p>
+        <div class="language">
+          <h3>
+            <p>語言</p>
+          </h3>
+          <p>
+            <a href="">English (US)</a>
+          </p>
+          <p>
+            <a href="">繁體中文</a>
+          </p>
+          <p>
+            <a href="">日本語</a>
+          </p>
+        </div>
+      </div>
+      <div class="facebook">
+        <h3>
+          <p>Instagram</p>
+        </h3>
+        <a href="https://www.facebook.com/inlineapps/">Facebook Page</a>
+        <div><img src="./public/footer-facebook.png" alt="" /></div>
+      </div>
+    </footer>
   </body>
 </html>
