@@ -255,6 +255,12 @@ header li:hover .dropdown {
   width: 200px;
 }
 
+.restaurant-content li:nth-of-type(1){
+   border-bottom: 4px solid #ff6e06;
+  color: #252932;
+  font-weight: bold;
+}
+
 .restaurant-content li.active {
   border-bottom: 4px solid #ff6e06;
   color: #252932;
